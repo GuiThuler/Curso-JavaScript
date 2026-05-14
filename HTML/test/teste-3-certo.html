@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 245, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    background-color: aliceblue;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4f7a83;
+    outline: none;
+}
+
+input:invalid {
+    background-color: #ffc5c5;
+}
+
+input:valid {
+    background-color: #b7ffb7;
+}
+
+input:required:invalid,
+select:required:invalid {
+    border-color: #ffb3b3;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: rgb(90, 255, 255);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(62, 168, 255);
+    transform: scale(1.03);
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<form action="#" method="get">
+    <h1>Formulário</h1>
+
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="exemplo@gmail.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" required>
+    </div>
+
+    <div class="form-group">
+        <label>Você é Dev?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="dev" value="sim"> Sim</label>
+            <label><input type="radio" name="dev" value="nao"> Não</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="ensino">Ensino</label>
+        <select id="ensino" required>
+            <option value="">Escolha uma opção</option>
+            <option>Sem ensino</option>
+            <option>Ensino fundamental</option>
+            <option>Ensino médio</option>
+            <option>Ensino superior</option>
+            <option>Pós-graduado</option>
+            <option>Mestrado</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="hab">Quais habilidades você tem?</label>
+        <textarea id="hab" rows="4" placeholder="Tenho habilidades em..."></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+</body>
+</html>

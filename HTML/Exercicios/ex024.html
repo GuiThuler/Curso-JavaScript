@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resuminho</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        header .topo {
+            background-color: black;
+            width: 100%;
+            height: 50px;
+            position:fixed;
+            z-index: 1;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            padding: 10px;
+            text-align: center;
+            color: rgb(162, 211, 255);
+        }
+
+        .cont1 {
+            background-color: rgb(78, 102, 102);
+            height: 40vw;
+            padding: 70px 5px 0 5px;
+        }
+
+        .cont2 {
+            background-color: rgb(30, 96, 105);
+            height: 40vw;
+            padding: 70px 5px 0 5px;
+        }
+        
+        .info {
+            background-color: rgb(5, 19, 45);
+            height: 20vw;
+            padding: 70px 5px 0 5px;
+        }
+
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+        }
+
+        a:hover {
+            background-color:  rgb(193, 179, 255);
+        }
+
+            .one {
+            height: 40vw;
+            background-color: rgb(72, 72, 72);
+            padding: 80px 5px 0 5px;
+            z-index: 0;
+        }
+        
+        .c1 {
+            float: left;
+            padding-right: 30px;
+            position: relative;
+            bottom: 15px;
+        }
+
+        .c2 {
+            position: relative;
+            bottom: 15px;
+            float: left;
+            padding-right: 30px;
+        }
+
+        .c3 {
+            position: relative;
+            bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topo">
+            <h1>Resuminho</h1>
+        </div>
+    </header>
+    
+    <section class="one">
+            <div class="c1"></div><a href="#cont1">Conteudo 1</a>
+            <div class="c1"></div><a href="#cont2">Conteudo 2</a>
+            <div class="c1"></div><a href="#info">Conteudo 3</a>
+    </section>
+
+    <section>
+        <div class="cont1" id="cont1">
+            conteudo 1
+        </div>
+    </section>
+
+    <section>
+        <div class="cont2" id="cont2">
+            conteudo 2
+        </div>
+    </section>
+
+    <footer class="info" id="info">
+        infos
+    </footer>
+</body>
+</html>

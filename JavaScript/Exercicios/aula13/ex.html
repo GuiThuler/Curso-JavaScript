@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercícios aula 13</title>
+</head>
+<body>
+  
+  <script>
+  const nome = prompt('Digite seu nome completo:');
+  document.body.innerHTML += `Seu nome é: ${nome}<br />`;
+  const nomeLetras = nome.length;
+  document.body.innerHTML += `Seu nome tem ${nomeLetras} letras <br />`;
+  document.body.innerHTML += `A segunda letra do seu nome é: ${(nome[2])}<br />`;
+  const primeiroIndice = nome.indexOf('l');
+  document.body.innerHTML += `Qual o primeiro índice da letra "L" no seu nome? ${primeiroIndice} <br />`;
+  const ultimoIndice = nome.lastIndexOf('e');
+  document.body.innerHTML += `Qual o último índice da letra "E" no seu nome? ${ultimoIndice} <br />`;
+  const letrasFinais = nome.slice(-3);
+  document.body.innerHTML += `As últimas 3 letras do seu nome são: ${letrasFinais} <br />`;
+  const palavrasNome = nome.match(/[a-z]/g);
+  document.body.innerHTML += `As palavras do seu nome são: ${palavrasNome} <br />`;
+  const letraMaiuscula = nome.toLocaleUpperCase();
+  document.body.innerHTML += `Seu nome com letras maiúsculas: ${letraMaiuscula} <br />`;
+  const letraMinuscula = nome.toLocaleLowerCase();
+  document.body.innerHTML += `Seu nome com letras minúsculas: ${letraMinuscula} <br />`;
+
+  // no fim era mais facil fazer dentro dos ${} e nao criar um monte de const
+  </script>
+</body>
+</html>

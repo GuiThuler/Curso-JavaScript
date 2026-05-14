@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box 3</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .flex-box {
+            background-color: aquamarine;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+
+
+        .box {
+            background-color: rgb(38, 0, 255);
+            color: rgb(255, 0, 230);
+            height: 300px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 320px;
+
+            /* flex: 1 1 320px; */
+        }
+
+        .box:nth-child(2) {
+            flex: 10 1 320px;
+            background-color: aquamarine;
+        }
+
+        .box:nth-child(3) {
+            order: 1;
+        }
+
+        .box:nth-child(4) {
+            order: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <img src="assets/img/css-flexbox-poster.png" alt="flex" width="800px">
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!-- DESAFIO 2 – Cards Responsivos
+Objetivo:
+
+Criar uma seção com 3 cards contendo:
+
+Imagem
+
+Título
+
+Texto
+
+Botão
+
+Regras:
+
+Cards lado a lado no desktop
+
+Empilhados no mobile
+
+Usar media query
+
+Usar gap
+
+Efeito :hover no card
+
+Se você apanhar na responsividade → revisar media queries. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+    <style>
+        body {
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            margin: 5%;
+            height: 70vh;
+            background-color: rgba(243, 255, 136, 0.534);
+        }
+        
+        .marinhos {
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .marinhos:hover {
+            background-color: rgba(127, 255, 212, 0.801);
+            border: solid rgba(0, 0, 0, 0.384) 2px;
+        }
+
+        .terrestres {
+            background-color:  rgb(121, 75, 32);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .terrestres:hover {
+            background-color:  rgba(146, 91, 39, 0.795);
+            border: solid rgba(0, 0, 0, 0.384) 2px;
+        }
+
+        .voadores {
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .voadores:hover {
+            background-color: rgb(255, 255, 255);
+            border: solid rgba(0, 0, 0, 0.384) 2px;
+        }
+
+        section {
+            border-radius: 10px;
+            margin: 30px;
+            width: 30%;
+        }
+
+
+        @media (max-width: 690px) {
+
+            main {
+                height: auto;
+                padding: 5px;
+                flex-direction: column;
+            }
+        
+            section {
+                width: 94%;
+                margin: 10px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animais</h1>
+    <main>
+        <section class="marinhos">
+            <h2>Marinhos</h2>
+            <p>Peixes</p>
+            <img src="#" alt="mar">
+            <button>VER MAIS</button>
+        </section>
+        <section class="terrestres">
+            <h2>Terrestres</h2>
+            <p>Roedores</p>
+            <img src="#" alt="terra">
+            <button>VER MAIS</button>
+        </section>
+        <section class="voadores">
+            <h2>Voadores</h2>
+            <p>Aves</p>
+            <img src="#" alt="ar">
+            <button>VER MAIS</button>
+        </section>
+    </main>
+</body>
+</html>

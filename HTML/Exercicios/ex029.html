@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box 4</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .grid {
+            display: flex;
+        }
+
+        .grid .text {
+            background-color: chartreuse;
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            padding: 30px;
+            
+        }
+
+        p {
+            padding: 0 0 15px;
+            font-size: 24px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+
+        .gallery .img {
+            background-color: aqua;
+            height: 50px;
+            display: flex;
+            flex: 1 0 20%;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="text">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus ex incidunt dicta labore natus optio eveniet nobis explicabo corrupti blanditiis vitae aperiam eius, totam nemo reprehenderit aspernatur, commodi quidem beatae.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum officiis voluptate accusantium nobis sapiente, a aliquid aspernatur et necessitatibus consectetur quod blanditiis tempora ad. Quam sed saepe velit facilis necessitatibus.</p>
+        </div>
+         <div class="text">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus ex incidunt dicta labore natus optio eveniet nobis explicabo corrupti blanditiis vitae aperiam eius, totam nemo reprehenderit aspernatur, commodi quidem beatae.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum officiis voluptate accusantium nobis sapiente, a aliquid aspernatur et necessitatibus consectetur quod blanditiis tempora ad. Quam sed saepe velit facilis necessitatibus.</p>
+            <div class="gallery">
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

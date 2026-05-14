@@ -1,0 +1,137 @@
+<!-- 
+DESAFIO 1 – Estrutura + Flexbox (Base Sólida)
+Objetivo:
+
+Criar uma página com:
+
+Header com logo à esquerda e menu à direita
+
+Seção principal com:
+
+Título
+
+Parágrafo
+
+Botão
+
+Footer simples centralizado
+
+🧠 Você deve usar:
+
+HTML semântico (header, main, section, footer)
+
+Flexbox
+
+Box model
+
+:hover no botão
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO 1</title>
+    <style>
+        body {
+            background-color: rgba(230, 217, 144, 0.342);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .menu {    
+        box-sizing: border-box;
+        background-color: rgba(255, 196, 144, 0.514);
+        width: auto;
+        height: auto;
+        max-width: 400px;
+        min-width: 80px;
+        min-height: 100px;
+        max-height: auto;
+        border: 3px solid black;
+        text-align: justify;
+        margin: 30px;
+        padding: 10px 0 10px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-left: auto;
+        }
+
+        .box {
+            background-color: rgba(255, 192, 119, 0.11);
+            color: rgb(255, 140, 63);
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+            min-width: 80px;
+            min-height: 100px;
+            max-height: auto;
+            padding: 0 10px 10px 10px;
+            margin: 10px;
+            border-radius: 2%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: left;
+        }
+
+
+        .botao {
+            margin: 20px;
+            padding: 10px;
+            text-transform: uppercase;
+
+        }
+
+        .botao:hover {
+            background-color: rgba(255, 231, 180, 0.322);
+        }
+
+        footer {
+            height: 300px;
+            background-color: antiquewhite;
+            text-align: center;
+            padding-top: 100px;
+            margin-top: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MENU DO RESTAURANTE</h1>
+        <img src="#" alt="LOGO">
+    </header>
+    <main class="menu">
+        <section class="box">
+            <h2>Massas</h2>
+            <p>Macarrão com calabresa</p>
+            <p>Macarrão com frango</p>
+            <p>Macarrão a molho branco</p>
+        </section>
+        <section class="box">
+            <h2>Pizzas</h2>
+            <p>Pizza de calabresa</p>
+            <p>Pizza de frango com catupiry</p>
+            <p>Pizza Portuguesa</p>
+        </section>
+        <section class="box">
+            <h2>Bebidas</h2>
+            <p>Cerveja</p>
+            <p>Refrigerante</p>
+            <p>Suco</p>
+        </section>
+    <button class="botao">Pedir</button>
+</main>
+</header>
+    <footer>
+        <p>Esse é o footer, mais infos acima!</p>
+    </footer>
+</body>
+</html>

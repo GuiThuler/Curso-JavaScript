@@ -1,0 +1,181 @@
+<!-- DESAFIO 3 – Formulário Profissional
+Objetivo:
+
+Criar um formulário completo com:
+
+Nome
+
+Email
+
+Senha
+
+Select
+
+Textarea
+
+Botão enviar
+
+Você deve usar:
+
+:focus
+
+:invalid
+
+:hover
+
+Estilizar inputs
+
+Centralizar com flexbox
+
+Aqui você consolida forms + pseudo-classes. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+         * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            background-color: rgb(255, 245, 231);
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .flexbox {
+            display: flex;
+            flex-direction: column;
+            background-color: aliceblue;
+            margin: 2% 50vh;
+            padding: 3%;
+            align-items: center;
+            height: auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        p {
+            margin: 3%;
+        }
+
+        #nome {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #email {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #senha {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #sim {
+            margin-right: 20px;
+        }
+
+        #nao {
+            margin-top: 10px;
+        }
+
+        #hab {
+            padding: 5px;
+            margin-top: 10px;
+            display: flex;
+            width: 330px;
+        }
+
+        #enviar {
+            width: 8%;
+            padding: 1%;
+            text-transform: uppercase;
+            border: 1px solid rgb(79, 122, 131);
+            background-color: rgb(90, 255, 255);
+        }
+
+        #selecionar {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #enviar:hover {
+            border: 1px solid rgb(79, 122, 131);
+            background-color: rgb(62, 168, 255);
+        }
+
+        option {
+            background-color: rgb(204, 231, 255);
+        }
+
+        #hab:focus {
+            color: rgb(123, 123, 255);
+        }
+
+        input:invalid {
+            background-color: #ffc5c5;
+        }
+
+        input:valid {
+            background-color: #b7ffb7;
+        }
+
+        input:required {
+            border-color: #84ffa3;
+        }
+
+        input:required:invalid {
+            border-color: #ffb3b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" target="_blank" class="flexbox">
+        <p>FORM</p>
+        <p>
+            <label for="name">Nome</label>
+            <input type="text" id="nome" required>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="exemplo@gmail.com" required>
+        </p>
+        <p>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" required>
+        </p>
+        <p>Vc é Dev?</p>
+        <p>
+            <label for="sim">Sim</label>
+            <input type="radio" id="sim" name="dev" value="sim">
+
+            <label for="nao">Nao</label>
+            <input type="radio" id="nao" name="dev" value="Nao">
+        </p>
+        <p>
+            <label for="selecionar">Ensino</label>
+            <select name="selecionar" id="selecionar" required>
+                <option value="escolha">Escolha uma opção</option>
+                <option value="sem">Sem ensino</option>
+                <option value="fundamental">Ensino fundamental</option>
+                <option value="medio">Ensino medio</option>
+                <option value="superior">Ensino superior</option>
+                <option value="pos">Pos-graduado</option>
+                <option value="mestrado">Mestrado</option>
+            </select>
+        </p>
+        <p>
+            <label for="hab">Quais habilidades vc tem?</label>
+            <textarea name="hab" id="hab" placeholder="Tenho habiliodades em..."></textarea>
+        </p>
+        <input type="submit" value="enviar" id="enviar">
+    </form>
+</body>
+</html>

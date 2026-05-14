@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade CSS</title>
+    <style>
+        /*
+        ID - CLASS - ATRIBUTOS - PSEUDO-CALSS -  ELEMENTOS E PSEUDO-ELEMENTOS
+        */
+
+        #p .p p {
+            background-color: aqua;
+        }
+
+        #p {
+            background-color: blue;
+        }
+
+        .p {
+            background-color: red;
+        }
+
+        p {
+            background-color: blueviolet !important;
+        }
+    </style>
+</head>
+<body>
+    <p class="p" id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, sapiente quam praesentium possimus unde voluptates fugiat laboriosam facere et doloremque earum repudiandae, recusandae ducimus cupiditate! Ratione quibusdam sit non enim?</p>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classe</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: rgb(77, 255, 0)
+        }
+
+        a:visited {
+            color: red
+        }
+
+        .decoration {
+            transition: all 1s ease-in-out;
+        }
+
+        .decoration:hover {
+            background-color: rgb(172, 255, 151);
+        }
+
+        a:active {
+            color: blueviolet;
+        }
+
+        input:focus {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.509);
+            outline: none;
+            border: 1px solid black;
+        }
+
+        #check {
+            width: 100px;
+            height: 100px;
+        }
+
+        input:checked  + p {
+            background-color: aquamarine;
+            width: 50px;
+            height: 50px;
+        }
+
+        input:required {
+            background-color: chocolate;
+        }
+
+        ul li:first-child {
+            color: blueviolet;
+        }
+
+        ul li:last-child {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="decoration">
+        <header>
+                <a href="#">
+                    <h1>Decoration</h1>
+                </a>
+        </header>
+    </div>
+    <div>
+        <section>
+            <input type="text">
+        </section>
+    </div>
+     <div>
+        <section>
+            <input type="checkbox" name="check" id="check">
+            <p>JAVA</p>
+        </section>
+    </div>
+    <input type="text" required>
+
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+</html>

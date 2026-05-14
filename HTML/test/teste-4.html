@@ -1,0 +1,232 @@
+<!--  DESAFIO 4 – Layout com Grid
+Objetivo:
+
+Criar layout estilo dashboard:
+
+Header no topo
+
+Sidebar à esquerda
+
+Conteúdo principal à direita
+
+Cards dentro do conteúdo
+
+Regras:
+
+Usar CSS Grid
+
+Não usar position para estruturar layout
+
+Responsivo
+
+Se você dominar grid → já está acima da média. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+
+        body {
+            background-color: azure;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+        .topo {
+            background-color: rgb(151, 248, 255);
+            padding: 3%; 
+            height: 8vh;
+        }
+
+        h1 {
+            float: left;
+            color: rgb(71, 8, 243);
+            font-size: 30px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: right;
+            text-transform: uppercase;
+            flex-direction: row;
+            gap: 10px;
+            
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: rgb(163, 163, 214);
+            color: aliceblue;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: rgb(88, 50, 175);
+        }
+
+        .nav {
+            background-color: rgb(88, 216, 255);
+            min-height: 900px;
+            max-height: 100vh;
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            padding: 3%;
+            gap: 50px;
+            float: left;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            max-width: 1100px;
+            grid-template-columns: [um] 1fr [dois] 1fr [tres] 1fr;
+            gap: 10px;
+        }
+
+        section {
+            display: flex;
+            float: left;
+        }
+
+        .box {
+            background-color: rgb(215, 242, 255);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0 0 30px;
+            transition: all 0.3s ease;
+        }
+
+        .box:hover {
+            background-color: rgb(201, 255, 232);
+        }
+
+         @media (min-width: 320px) and (max-width: 397px) {
+            section {
+                float: none;
+            }
+            .grid {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+                grid-template-columns: [um] 1fr;
+            }
+
+            .box {
+                width: 60vh;
+                margin: 10px 10px 10px 20px;
+            }
+
+            .topo {
+                align-items: center;
+                float: none;
+                padding: 25px;
+                width: 100vh;
+            }
+            .menu {
+                flex-direction: row;
+                float: inline-start;
+            }
+
+            .nav {
+                width: 100vh;
+                min-height: 300px;
+                padding: 25px;
+            }
+        }
+
+          @media (min-width: 397px) and (max-width: 611px){
+            .grid {
+                grid-template-columns: [um] 1fr;
+        }
+
+        .nav {
+            min-height: 1370px;
+        }
+        
+    }
+
+
+            @media (min-width: 611px) and (max-width: 767px){
+            .grid {
+                grid-template-columns: [um] 1fr [dois] 1fr;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header class="topo">
+        <h1>TOPO</h1>
+            <nav>
+                <ul class="menu">
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="#">
+                        <li>Sobre</li>
+                    </a>
+                    <a href="#">
+                        <li>Contatos</li>
+                    </a>
+                </ul>
+            </nav>
+    </header>
+    
+    <section>
+        <nav>
+                <ul class="nav">
+                    <a href="#">
+                        <li>Resumos</li>
+                    </a>
+                    <a href="#">
+                        <li>Analises</li>
+                    </a>
+                    <a href="#">
+                        <li>Investimentos<li>
+                    </a>
+                </ul>
+            </nav>
+    </section>
+
+    <main class="grid">
+         <div class="box">
+            <h2>CARD</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse non quae magnam perferendis pariatur? Provident, omnis quam. Voluptates possimus unde dicta nulla, quidem laudantium accusantium repellendus consequatur labore, ut et! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolorum error omnis non beatae delectus quas, cumque dignissimos ex illo possimus fugiat, veritatis placeat molestiae a maxime officia nisi perferendis!</p>
+         </div>
+         <div class="box">
+            <h2>CARD</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse non quae magnam perferendis pariatur? Provident, omnis quam. Voluptates possimus unde dicta nulla, quidem laudantium accusantium repellendus consequatur labore, ut et! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam magni nemo ipsum nisi harum aspernatur minima recusandae qui, voluptas amet. Eveniet autem vitae aperiam ratione voluptate eos cupiditate deleniti asperiores.</p>
+         </div>
+         <div class="box">
+            <h2>CARD</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse non quae magnam perferendis pariatur? Provident, omnis quam. Voluptates possimus unde dicta nulla, quidem laudantium accusantium repellendus consequatur labore, ut et! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos vitae provident et! Odio libero et natus corrupti, error fuga expedita ea id doloribus quidem veniam reiciendis, illo illum architecto nobis.</p>
+         </div>
+         <div class="box">
+            <h2>CARD</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse non quae magnam perferendis pariatur? Provident, omnis quam. Voluptates possimus unde dicta nulla, quidem laudantium accusantium repellendus consequatur labore, ut et! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus tenetur explicabo voluptate soluta reprehenderit aspernatur impedit, modi temporibus vitae suscipit odit ducimus doloremque, consequuntur animi harum sit minima. Quidem, distinctio.</p>
+         </div>
+         <div class="box">
+            <h2>CARD</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse non quae magnam perferendis pariatur? Provident, omnis quam. Voluptates possimus unde dicta nulla, quidem laudantium accusantium repellendus consequatur labore, ut et! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ab cum voluptatem iure nemo cupiditate, atque quidem in quia doloremque quod repudiandae nihil, itaque expedita? Deserunt culpa ea adipisci molestiae.</p>
+         </div>
+    </main>
+</body>
+</html>

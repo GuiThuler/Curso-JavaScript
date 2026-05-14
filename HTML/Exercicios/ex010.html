@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: auto;
+        }
+        table td, table th {
+            border: 1px solid rgb(255, 167, 167);
+            text-align: left;
+        }
+        table caption {
+            caption-side: top;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        tfoot td, table th {
+            background-color: rgb(149, 205, 255);
+        }
+
+        .tabela-responsiva {
+            max-width: 100%;
+            overflow-x: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, ipsa voluptatum obcaecati blanditiis mollitia molestias esse iusto qui dolores</p>
+<div class="tabela-responsiva">
+    <table>
+        <caption>Descrição da tabela</caption>
+        <thead>
+            <tr>
+                <th>Titulo 1</th>
+                <th>Titulo 2</th>
+                <th>Titulo 3</th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <td colspan="2" rowspan="2">Corpo 1</td>
+            <td>Corpo 3</td>
+        </tr>
+        <tr>
+            <td>Corpo 3</td>
+        </tr>
+        <tr>
+            <td>Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1Corpo 1</td>
+            <td>Corpo 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, facilis perferendis sequi alias ab error sed praesentium pariatur, molestiae velit et quibusdam exercitationem? Asperiores, blanditiis architecto. Neque voluptates nihil nulla!</td>
+            <td>Corpo 3</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Corpo 1</td>
+            <td>Corpo 2</td>
+            <td>Corpo 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem saepe sequi qui id, quis porro, aliquid asperiores omnis odit, est ratione cum odio dolores ab consequuntur ea cumque error quidem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam nemo sequi quis perferendis veritatis maxime animi beatae, eius qui commodi quo explicabo nulla placeat vero reprehenderit doloribus fugit optio possimus!</td>
+        </tr>
+    </tfoot>
+</table>
+</div>
+</body>
+</html>

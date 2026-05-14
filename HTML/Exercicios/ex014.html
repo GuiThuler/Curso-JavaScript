@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo2</title>
+    <style>
+        p:not(.meio) {
+            background-color: blue;
+        }
+
+        input:not(:checked) + p{
+            background-color: blueviolet;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: aquamarine;
+        }
+
+        ul li:nth-child(even) {
+            background-color: blue;
+        }
+
+        ul li:nth-child(3n) {
+            background-color: rgb(255, 0, 0);
+        }
+
+        ul li:nth-child(3n+7) {
+            background-color: rgb(255, 0, 195);
+        }
+    </style>
+</head>
+<body>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur suscipit iure consectetur dolores nulla reprehenderit, sequi laborum soluta perferendis enim, sit vitae a quasi molestiae, perspiciatis libero facere nam cum?</p>
+
+    
+    <p class="meio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique beatae optio sit dignissimos accusantium rem blanditiis quidem qui sequi, temporibus, reprehenderit, debitis magni esse ipsum ut eius soluta! Eveniet, error.</p>
+    
+    <input type="checkbox">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit est distinctio quo laborum repellat voluptatem nesciunt perferendis enim quae. Eligendi, sint quasi est modi quo pariatur ipsa fugit animi laudantium.</p>
+
+    <ul>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+</body>
+</html>

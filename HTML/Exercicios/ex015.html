@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-ELEMENTOS</title>
+    <style>
+        ul li::after {
+            content: ' a ';
+            color: blueviolet;
+        }
+
+        ul li::before {
+            content: ' b ';
+            color: burlywood;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        p::first-letter {
+            font-size: 150px;
+            display: block;
+            margin: 0 10px 0 10px;
+            float: left;
+        }
+
+        p::first-line {
+            background-color: rgb(179, 255, 230);
+        }
+
+        p::selection {
+            background-color: black;
+            color: white;
+        }
+
+        ::placeholder {
+            color: rgb(238, 0, 187);
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis optio, perspiciatis sed provident minus ullam laborum, atque voluptatibus exercitationem, ipsam facere quod quibusdam natus! Ea iure illo neque asperiores quis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab necessitatibus rem, quaerat laboriosam perferendis dolore enim quisquam obcaecati provident eius ad harum aspernatur? Cum et est, natus eum totam dolore? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni recusandae dolore nulla aliquam, hic vero dolorum harum voluptatum laboriosam sit! Sequi, voluptatem? Ipsum officiis quisquam nihil id ad neque temporibus.</p>
+
+    <ul>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <input type="text" placeholder="Digite algo...">
+</body>
+</html>

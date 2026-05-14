@@ -1,0 +1,326 @@
+<!-- DESAFIO 5 - Landing Page Completa
+Objetivo:
+
+Criar landing page com:
+
+Hero section
+
+Seção de benefícios (cards)
+
+Depoimentos
+
+Formulário
+
+Footer
+
+Você deve usar:
+
+Flexbox
+
+Grid
+
+Pseudo-classes
+
+nth-child
+
+Especificidade correta
+
+Media queries
+
+Aqui você junta tudo. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lang-page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+
+        h3 {
+            font-size: 12px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+            a {
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: rgb(66, 43, 92);
+            color: aliceblue;
+            padding: 5px;
+            border-radius: 5%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            width: 100px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: aliceblue;
+            border-radius: 3%;
+            background-color: #4b2883;
+        }
+
+        p {
+            font-size: 8px;
+            padding: 3px 0 0 0;
+        }
+
+        img {
+            padding: 20px 0 0 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-areas: 
+            "topo topo foto"
+            "main main main"
+            "footer footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 200px 1fr;
+            min-height: 100vh;
+        }
+
+        .topo {
+            grid-area: topo;
+            background-color: rgb(192, 255, 255);
+            border-radius: 0 0 2% 0;
+            z-index: -1;
+            background-image: linear-gradient(to right, rgb(171, 255, 255), #ffffff);
+            padding: 10px;
+            
+        }
+
+        .topoimg {
+            width: 200px;
+            height: 300px;
+            z-index: 1;
+        }
+
+        .main {
+            grid-area: main;
+            border-radius: 0 2% 0 0;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .contanierBeneficios {
+            display: grid;
+            grid-template-columns: [um] 1fr [dois] 1fr [tres] 1fr;
+            height: 250px;
+        }
+
+        .contanierBeneficios .card{
+            background-color: #ffffff;
+            height: 150px;
+            width: 200px;
+        }
+
+        .contanierAvaliacoes {
+            display: grid;
+            grid-template-columns: [um] 1fr [dois] 1fr [tres] 1fr;
+            height: 250px;
+        }
+
+        .contanierAvaliacoes .card {
+            background-color: #ffffff;
+            height: 150px;
+            width: 200px;
+        }
+
+        .card {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5%;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background-color: rgb(218, 238, 255);
+            border-radius: 3%;
+            padding: 9.8px;
+        }
+
+        .sectionCenter {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px;
+        }
+
+          #form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 200px;
+            justify-content: center;
+        }
+
+        .formFinal {
+            background-color: rgb(224, 180, 250);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 250px;
+            padding-top: 50px;
+        }
+
+        #enviar {
+            background-color: rgb(65, 0, 119);
+            color: rgb(255, 255, 255);
+            border: 2px solid rgb(39, 0, 78);
+            transition: all 0.5s ease;
+        }
+        
+        #enviar:hover {
+            color: rgb(221, 238, 253);
+            background-color: rgb(89, 60, 156);
+        }
+        section:nth-child(2n) {
+            background-color: #7ee5ff;
+        }
+
+       @media (max-width: 600px) {
+            .contanierBeneficios  {
+                grid-template-columns: [um] 1fr;
+                height: 600px;
+            }
+
+            .contanierAvaliacoes  {
+                grid-template-columns: [um] 1fr;
+                height: 600px;
+            }
+        }
+
+         @media (min-width: 601px) and (max-width: 720px) {
+            .contanierBeneficios  {
+                grid-template-columns: [um] 1fr [dois] 1fr;
+                height: 400px;
+            }
+
+            .contanierAvaliacoes  {
+                grid-template-columns: [um] 1fr [dois] 1fr;
+                height: 400px;
+            }
+        } 
+
+    </style>
+</head>
+<body>
+
+    <!-- TOPO -->
+<div class="grid">
+
+    <header class="topo">
+        <section class="topoimg">
+            <h1>Lang-Page</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At repellat dicta earum error sed laborum vel a? Eum hic dolor, in nostrum aliquam, amet voluptates molestiae, maxime ab exercitationem obcaecati?</p>
+
+                <a href="#" target="_blank">Saiba mais</a>
+                <a href="#" target="_blank">Sobre nos</a>
+        </section>     
+        
+    </header>
+
+    <img src="a4e70984-5c54-4a8b-80ce-b7a1b5f828b6.png" alt="marketing" id="foto" class="topoimg">
+    <!-- MAIN COM AS SECTIONS -->
+
+
+    <main class="main">
+        <section class="sectionCenter">
+            <h2>Nossos beneficios</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<p>
+           </section>
+        <section class="contanierBeneficios">
+                        <div class="card">
+                            <h3>Card1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas aliquam ea fugit dolores dolorum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex reiciendis a omnis iste recusandae, harum eveniet voluptatum natus sint! Optio praesentium molestias repellat voluptatem eum dignissimos assumenda tenetur quo eveniet.</p>
+                        </div>
+
+                    
+                        <div class="card">
+                            <h3>Card2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas aliquam ea fugit dolores dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae autem illum necessitatibus alias inventore aliquam! Quibusdam recusandae odio, libero maiores itaque numquam.</p>
+                        </div>
+                    
+                        <div class="card">
+                            <h3>Card3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas aliquam ea fugit dolores dolorum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic laboriosam, sed et ratione, nulla similique sit deleniti maiores veniam provident omnis culpa! Iste quaerat asperiores ut ducimus recusandae, harum consequatur?</p>
+                        </div>
+                        
+        </section>
+
+        <section class="sectionCenter">
+            <h2>Avaliaçoes</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="card">
+        </section>
+
+        <section class="contanierAvaliacoes">
+            <div class="card">
+                <h3>Ava1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas aliquam ea fugit dolores dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error est iste ratione ipsa ducimus, quae delectus maiores laborum incidunt asperiores a, impedit similique molestias enim eaque nobis veritatis laudantium voluptatibus?</p>
+            </div>
+        
+            <div class="card">
+                <h3>Ava2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas aliquam ea fugit dolores dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, error. Aliquam odio deserunt ratione molestiae nostrum placeat, sapiente consequatur minus exercitationem est a quibusdam commodi! Sequi ratione necessitatibus error totam.</p>
+            </div>
+        
+            <div class="card">
+                <h3>Ava3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas aliquam ea fugit dolores dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit numquam tempore optio placeat doloribus veniam! Fugiat, quia nemo aut ea vitae labore ratione voluptas ipsam beatae, nihil animi! Eius, vel!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <section class="sectionCenter">
+        <h2>Entre em contato</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </section>
+        <div class="formFinal">
+        <form action="#" method="get" target="_blank" id="form">
+            <input type="text" class="nomeCliente" name="nomeCliente" placeholder="Nome">
+            <input type="email" id="emailCliente" name="emailCliente" placeholder="Email">
+            <textarea name="mensagem" id="mensagemCliente" placeholder="Mensagem" ></textarea>
+            <input type="button" id="enviar" value="ENVIAR">
+        </form>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

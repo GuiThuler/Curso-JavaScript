@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+}
+
+section{
+padding:60px 20px;
+}
+
+h1{font-size:32px;}
+h2{font-size:24px;}
+h3{font-size:18px;}
+
+p{
+font-size:14px;
+margin-top:10px;
+}
+
+/* BOTÕES */
+
+a{
+text-decoration:none;
+background:#422b5c;
+color:white;
+padding:10px 15px;
+border-radius:5px;
+transition:.3s;
+display:inline-block;
+margin-top:15px;
+}
+
+a:hover{
+background:#4b2883;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+background:linear-gradient(to right, rgb(171,255,255), #fff);
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero img{
+width:100%;
+max-width:350px;
+}
+
+/* TITULOS CENTRALIZADOS */
+
+.sectionCenter{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* CARDS (BENEFÍCIOS E AVALIAÇÕES) */
+
+.containerBeneficios,
+.containerAvaliacoes{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap:20px;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:8px;
+transition:.3s;
+}
+
+.card:hover{
+background:#e0f3ff;
+transform:translateY(-5px);
+}
+
+/* nth-child */
+
+.card:nth-child(2){
+background:#f0e6ff;
+}
+
+/* FORM */
+
+.formFinal{
+background:#e0b4fa;
+display:flex;
+justify-content:center;
+padding:40px 20px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+width:100%;
+max-width:400px;
+}
+
+input, textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+#enviar{
+background:#410077;
+color:white;
+border:none;
+cursor:pointer;
+transition:.3s;
+}
+
+#enviar:hover{
+background:#593c9c;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#222;
+color:white;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:700px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-text">
+<h1>Landing Page</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+<a href="#">Saiba mais</a>
+<a href="#">Sobre nós</a>
+</div>
+
+<img src="https://via.placeholder.com/350" alt="imagem">
+
+</section>
+
+<!-- BENEFÍCIOS -->
+<section>
+
+<div class="sectionCenter">
+<h2>Benefícios</h2>
+<p>Lorem ipsum dolor sit amet</p>
+</div>
+
+<div class="containerBeneficios">
+
+<div class="card">
+<h3>Card 1</h3>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<div class="card">
+<h3>Card 2</h3>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<div class="card">
+<h3>Card 3</h3>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- AVALIAÇÕES -->
+<section>
+
+<div class="sectionCenter">
+<h2>Avaliações</h2>
+<p>O que nossos clientes dizem</p>
+</div>
+
+<div class="containerAvaliacoes">
+
+<div class="card">
+<h3>Cliente 1</h3>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<div class="card">
+<h3>Cliente 2</h3>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<div class="card">
+<h3>Cliente 3</h3>
+<p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FORM -->
+<section>
+
+<div class="sectionCenter">
+<h2>Contato</h2>
+</div>
+
+<div class="formFinal">
+
+<form>
+
+<input type="text" placeholder="Nome" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Mensagem"></textarea>
+
+<input type="submit" value="Enviar" id="enviar">
+
+</form>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 - Sua Landing Page</p>
+</footer>
+
+</body>
+</html>

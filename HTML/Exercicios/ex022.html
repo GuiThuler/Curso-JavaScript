@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .pai {
+            height: 300vh;
+        }
+
+        .bloco {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .bloco2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(43, 255, 0);
+            position: absolute;
+            left: 50%;
+            margin-left: -100px;
+            top: 50%;
+            margin-top: -100px;
+            z-index: -1;
+            
+        }
+
+        .bloco3 {
+            width: 100%;
+            height: 200px;
+            background-color: blueviolet;   
+            position: relative;
+            float: left;
+            bottom: 150px;
+            z-index: 2;
+        }
+
+        .num {
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            top: 20px;
+            left: 20px;
+        }
+
+        ul {
+            height: 100px;
+            overflow-y: auto;
+        }
+
+        ul li.sticky {
+            position: sticky;
+            background-color: aqua;
+            top: 0%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div class="bloco">BACK</div>
+        <div class="bloco2"><span class="num">123</span></div>
+        <div class="bloco3"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id laborum fugiat perferendis ex quibusdam officiis tempora, consectetur officia dolorem accusamus itaque atque necessitatibus corrupti, praesentium repellat provident sapiente modi sequi?</p></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi soluta enim quo, autem necessitatibus molestiae, modi nulla commodi velit consequatur error molestias, laboriosam ipsam cum nesciunt aliquam quibusdam. Incidunt, commodi?</p>
+    </div> 
+
+    <ul>
+        <li class="sticky">A</li>
+        <li>a</li>
+        <li>a</li>
+        <li>a</li>
+        <li class="sticky">B</li>
+        <li>b</li>
+        <li>b</li>
+        <li>b</li>
+        <li class="sticky">C</li>
+        <li>c</li>
+        <li>c</li>
+        <li>c</li>
+        <li>c</li>
+        <li>c</li>
+        <li>c</li>
+    </ul>
+       
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Templates</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: auto;
+            grid-template-areas: 
+            'header header'
+            'nav main'
+            'footer footer';
+        }
+
+        .grid div:nth-child(1) {
+            grid-area: header;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .grid div:nth-child(2) {
+            grid-area: nav;
+            background-color: aqua;
+    
+        }
+
+        .grid div:nth-child(3) {
+            grid-area: main;
+            background-color: blue;
+        }
+
+        .grid div:nth-child(4) {
+            grid-area: footer;
+            background-color: chartreuse;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: auto;
+                grid-template-areas: 
+                'header'
+                'main'
+                'nav'
+                'footer';
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid">
+        <div>
+            <h1>LOGO</h1>
+            <nav>MENU</nav>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h2>lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam unde tenetur, voluptatibus, reiciendis placeat eius officiis at dolor omnis doloremque? Voluptatem sed aut fugit quam assumenda mollitia, vitae alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium sed iste, doloremque maiores qui praesentium dolores ipsa, voluptas illo eius hic omnis perspiciatis laudantium aut animi architecto, blanditiis atque? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ea. Labore dolorum aperiam inventore reiciendis saepe porro, doloremque magnam officiis, iure ex, vel eum quo est consequuntur quibusdam corporis rem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui dignissimos dolores, autem sapiente veritatis. Fugit voluptatibus nulla iste sint tempora, culpa pariatur nisi corporis sequi esse. Obcaecati, eaque optio.</p>
+        </div>
+        <div>FOOTER
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit corporis esse exercitationem explicabo inventore eos rem nisi quos beatae quod cumque voluptates nostrum ipsum ipsam, odio adipisci minima a accusamus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, consequatur numquam. Veritatis alias consequuntur enim quo! Autem omnis quis laborum eveniet, dolorem accusantium doloremque praesentium architecto ex nesciunt minima soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quaerat alias nobis incidunt velit totam? Sit ratione consequatur sapiente quis voluptatibus molestias similique fugit, est eaque vel vero minus quidem.</p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

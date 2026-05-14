@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .grid .col {
+            background-color: brown;
+            width: 33.33%;
+            height: 300px;
+            padding: 10px;
+            margin: 10px;
+            float: left;
+            
+        }
+
+        @media (max-width: 321px) {
+            .grid .col {
+                width: 100%;
+            }
+        }
+
+         @media all and (min-width: 321px) and (max-width: 768px) {
+            .grid .col {
+                width: 50%;
+            }
+        }
+
+          @media all and (min-width: 769px) and (max-width: 1200px) {
+            .grid .col {
+                width: 33%;
+            }
+        }
+
+          @media all and (min-width: 1200px) and (max-width: 1600px) {
+            .grid .col {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="grid">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+   </div>
+</body>
+</html>
+
