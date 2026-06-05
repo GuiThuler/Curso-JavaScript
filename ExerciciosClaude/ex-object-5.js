@@ -1,6 +1,6 @@
 // Exercício 5 — Método dentro do objeto (médio)
 // Crie um objeto contaBancaria com saldo, depositar(valor) e sacar(valor). O saque deve verificar se há saldo suficiente.
-// jsconst contaBancaria = {
+// const contaBancaria = {
 //   saldo: 1000,
 //   depositar(valor) {
 //     // adicione ao saldo
@@ -14,9 +14,13 @@
 const contaBancaria = {
   saldo: 1000,
   depositar(valor) {
-    // adicione ao saldo
+     
   },
   sacar(valor) {
-    // verifique saldo antes
+    if (saldo >= saldo) {
+      console.log()
+    } else {
+      console.log(`Saldo insuficiente. Seu saldo é ${saldo}. `)
   }
+}
 }
