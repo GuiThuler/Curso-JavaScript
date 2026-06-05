@@ -14,13 +14,17 @@
 const contaBancaria = {
   saldo: 1000,
   depositar(valor) {
-     
+    this.saldo += valor
+     console.log(`Valor ${valor} depositado com sucesso! Seu saldo agora é de ${this.saldo}`);
   },
   sacar(valor) {
-    if (saldo >= saldo) {
-      console.log()
+    if (valor <= this.saldo) {
+      this.saldo -= valor
+      console.log(`Saque no valor ${valor} realizado com sucesso! Seu saldo agora é de ${this.saldo}`)
     } else {
-      console.log(`Saldo insuficiente. Seu saldo é ${saldo}. `)
+      console.log(`Saldo insuficiente. Seu saldo é ${this.saldo}. `)
   }
 }
 }
+contaBancaria.depositar(500);
+contaBancaria.sacar(300);
