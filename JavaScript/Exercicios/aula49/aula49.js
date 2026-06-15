@@ -27,3 +27,11 @@ const arrow = () => {
 
 arrow();
 
+// Dentro de um objeto
+
+const obj = {
+    falar() {
+        console.log('Estou falando...')
+    }
+};
+obj.falar();
