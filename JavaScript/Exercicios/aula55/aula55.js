@@ -2,7 +2,7 @@
 
 // O IIFE proteje do escopo global
 
-(function() {
+(function(idade, peso, altura) {
 
     const nome = 'Guilherme';
     function criaSobrenome(sobrenome) {
@@ -14,7 +14,8 @@
     }
 
     mostraNome();
-})();
+    console.log(idade, peso, altura);
+})(30, 80, 1.80);
 
 // Quando esta parenteses () ele se torna uma funcao IIFE
 
