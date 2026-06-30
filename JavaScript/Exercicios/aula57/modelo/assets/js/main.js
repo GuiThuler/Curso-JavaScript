@@ -68,3 +68,27 @@ function criaCalculadora() {
 
 const calculadora = criaCalculadora();
 calculadora.inicia();
+
+// Factory Function
+// Função que retorna um objeto. Usada aqui pra criar a calculadora com propriedades e métodos encapsulados.
+
+// this
+// Aponta pro objeto que está executando o método. Dentro de callbacks como addEventListener, o this muda — arrow function resolve isso herdando o this do contexto externo.
+
+// Arrow function vs function normal
+// function tem this próprio (muda dependendo de quem chama). Arrow function herda o this de onde foi escrita. Por isso substituiu o .bind(this).
+
+// .bind(this)
+// Congela o valor do this dentro de uma função normal. Foi substituído pelas arrow functions nesse projeto.
+
+// eval()
+// Executa uma string como código JavaScript. Útil pra calcular expressões como "2+3*4", mas perigoso em produção.
+
+// try/catch
+// Usado quando um erro pode acontecer durante a execução e você não tem como prever antes com if. O try tenta, o catch captura o erro se explodir.
+
+// slice(0, -1)
+// Remove o último caractere de uma string. Usado no botão de apagar.
+
+// e.target
+// O elemento que foi clicado dentro do evento. Usado pra identificar qual botão foi pressionado pela classe dele.
