@@ -4,7 +4,7 @@ function closures(nome) {
     }
 }
 const nome1 = closures('Luiz');
-const nome2 = closures('Guilerme');
+const nome2 = closures('Guilherme');
 
 console.dir(nome1);
 console.dir(nome2);
